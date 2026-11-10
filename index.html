@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PyScript JavaScript -->
+    <script type="module" src="https://pyscript.net/releases/2026.7.2/core.js"></script>
+    <!-- PyScript CSS -->
+    <link href="https://pyscript.net/releases/2026.7.2/core.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
+    <style>
+        /* NavBar Design */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        /* Top Bar Container */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1a252f;
+            padding: 0 2rem;
+            height: 60px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-brand a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        #nav-toggle-check {
+            display: none;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-link {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background-color: #34495e;
+            color: #3498db;
+        }
+
+        .nav-toggle-label {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 26px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .nav-toggle-label .bar {
+            width: 100%;
+            height: 3px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle-label {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #1a252f;
+                padding: 1rem 0;
+                gap: 0.5rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+
+            .nav-menu li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-link {
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+                padding: 0.75rem 0;
+            }
+
+            #nav-toggle-check:checked ~ .nav-menu {
+                max-height: 300px;
+            }
+        }
+    </style>
+    <title>Homepage</title>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Site Title / Logo -->
+        <div class="nav-brand">
+            <a href="index.html">My Portal</a>
+        </div>
+
+        <!-- Hidden Checkbox for Mobile Toggle (No JS required) -->
+        <input type="checkbox" id="nav-toggle-check">
+
+        <!-- Hamburger Icon Button linked to Checkbox -->
+        <label for="nav-toggle-check" class="nav-toggle-label" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <!-- Navigation Links -->
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link active">Homepage</a></li>
+            <li><a href="drill2.html" class="nav-link">Add Member</a></li>
+            <li><a href="seatwork1.html" class="nav-link">Club Checker</a></li>
+            <li><a href="skillstest.html" class="nav-link">Elemental Checker</a></li>
+        </ul>
+    </nav>
+    <h1>Meet the Creator</h1>
+    <h4>What are my hobbies?</h4>
+    <p>I play games, cooking, watch animes, and listening to music</p>
+    <h4>What games specifically?</h4>
+    <a href="https://ultrakill.fandom.com/wiki/Home" target="_blank">Ultrakill</a><br>
+    <a href="https://geometry-dash.fandom.com/wiki/Geometry_Dash_Wiki" target="_blank">Geometry Dash</a><br>
+    <a href="https://hollowknight.fandom.com/wiki/Hollow_Knight_Wiki" target="_blank">Hollow Knight</a><br>
+    <h4>My favorite quotes:</h4>
+    <p>"When you gamble, you see hope. When you grind, you have hope." - Rachmiel Bien A. Lozada</p><br>
+    <p>What this quote of mine means is entirely external. If you have hope, then that means you cannot necessarily predict if it will happen. When you grind, you are taking small steps slowly. You see hope because you are seeing the goal bit by bit.</p>
+</body>
+</html>
